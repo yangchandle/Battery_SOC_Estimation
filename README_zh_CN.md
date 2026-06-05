@@ -157,3 +157,16 @@ P(k) = P(k) - K(k) * C(k) * P(k)            ······(15)
 ```
 
 [这篇文章](https://courses.engr.illinois.edu/ece420/sp2017/UnderstandingKalmanFilter.pdf)给出了关于卡尔曼滤波的一个较为直观的推导. [这篇文章](https://www.cs.ubc.ca/~murphyk/Papers/Julier_Uhlmann_mar04.pdf)里给出了有关UKF的详细解释.
+
+## 推荐的 Simulink BMS 仓库（适合上手）
+
+下面是一些在 GitHub 上适合入门学习、基于 Simulink/Simscape 搭建的 BMS 项目：
+
+- **MiniBMS (ks-santosh/MiniBMS)**：包含 SoC 估算、故障检测等模块，结构清晰，适合学习模型结构和流程。https://github.com/ks-santosh/MiniBMS
+- **MathWorks 教学资源 (MathWorks-Teaching-Resources/Battery-Systems)**：官方教学仓库，含 Simulink/Simscape 示例和课程材料，文档齐全，学习曲线友好。https://github.com/MathWorks-Teaching-Resources/Battery-Systems
+- **Battery BMS SOC Estimation (Elamaran-hub/battery-bms-soc-estimation)**：基于 Simulink，演示卡尔曼滤波类的 SoC 估算，适合学习状态估计。https://github.com/Elamaran-hub/battery-bms-soc-estimation
+- **BMS (shaurya101/BMS)**：面向电动车单体电池的 Simulink BMS 实现，包含工况驱动循环，便于做实践仿真。https://github.com/shaurya101/BMS
+- **13S24P_BMS_Simulation (DEPZiG/13S24P_BMS_Simulation)**：实际电池组拓扑（13S24P）仿真，适合学习电池组和拓扑建模。https://github.com/DEPZiG/13S24P_BMS_Simulation
+- **MiniBMS-MBD-Practice (shayubuhuifei111/MiniBMS-MBD-Practice)**：基于 MiniBMS 的教学/练习仓库，包含模型驱动开发（MBD）实践步骤，适合动手练习。https://github.com/shayubuhuifei111/MiniBMS-MBD-Practice
+
+可根据你的目标选择：要系统学习建模与仿真推荐 MathWorks 官方仓库；要练手和做状态估计可先看 MiniBMS 与 Elamaran-hub 的项目。
