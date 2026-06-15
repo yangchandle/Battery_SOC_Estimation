@@ -370,3 +370,26 @@ Week 7-8: 优化和验证
 
 *最后更新: 2026-06-05*
 *数据来源: GitHub搜索 (100+ stars, Python/C语言)*
+
+
+有，建议你按这个顺序看，比较适合从入门到整车模型：
+
+| 顺序 | GitHub 资料 | 适合学什么 |
+|---|---|---|
+| 1 | [MathWorks-Teaching-Resources/Battery-Systems](https://github.com/MathWorks-Teaching-Resources/Battery-Systems) | 最适合入门。讲电池系统术语、电芯建模、电池包、系统管理，使用 MATLAB、Simulink、Simscape。 |
+| 2 | [ks-santosh/MiniBMS](https://github.com/ks-santosh/MiniBMS) | 简单 BMS 模型，包含 SOC 计算、电压/温度监控、故障检测。 |
+| 3 | [rohit5584/48V-35Ah-Li-Ion-NMC...](https://github.com/rohit5584/48V-35Ah-Li-Ion-NMC-Battery-Pack-Modeling-and-Simulation-using-MATLAB-Simulink-for-Electric-Vehicles) | 48V 电池包、1RC 等效电路、库仑计量 SOC，适合理解算法基础。 |
+| 4 | [Vimalraaj1512/battery-pack-simulation](https://github.com/Vimalraaj1512/battery-pack-simulation) | 电池包串并联建模，仿真电压、温度、电流、SOC。 |
+| 5 | [mathworks/Simscape-Battery-Electric-Vehicle-Model](https://github.com/mathworks/Simscape-Battery-Electric-Vehicle-Model) | MathWorks 官方整车 BEV 模型，包含高压电池、电机、车辆纵向动力学，偏进阶。 |
+| 6 | [mathworks/EV-with-MATLAB-and-Simulink](https://github.com/mathworks/EV-with-MATLAB-and-Simulink) | 官方 EV 资源合集，可以在里面找 Battery / Energy 相关示例。 |
+
+我建议你先从 **Battery-Systems** 开始，它是官方教学模块，比直接打开复杂 `.slx` 模型友好很多。然后看 **MiniBMS** 和 **48V 电池包模型**，重点理解：
+
+- 电池等效电路模型：OCV、R、RC 网络
+- SOC：库仑计量、OCV 修正
+- 电压/电流/温度采样
+- 故障判断：过压、欠压、过温、过流
+- 电池包串并联建模
+
+运行前你最好确认 MATLAB 里有这些工具箱：`Simulink`、`Simscape`、`Simscape Electrical`，有些项目还会用到 `Simscape Battery`。
+
